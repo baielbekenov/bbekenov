@@ -21,7 +21,7 @@ services:
       - ${SERVER_PORT}:${SERVER_PORT}
     env_file:
       - .env
-    container_name: sf-service
+    container_name: bbekenov
     depends_on:
       - db
 
