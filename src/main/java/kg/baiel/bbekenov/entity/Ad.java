@@ -1,6 +1,8 @@
 package kg.baiel.bbekenov.entity;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDateTime;
 
@@ -14,7 +16,6 @@ public class Ad {
     private String title;
     private String price;
     private String city;
-    private String url;
     private String imageUrl;
     private LocalDateTime postedAt;
     private LocalDateTime fetchedAt = LocalDateTime.now();

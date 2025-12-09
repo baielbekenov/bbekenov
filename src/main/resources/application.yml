@@ -23,6 +23,12 @@ spring:
     properties:
       hibernate.jpa.provider: org.hibernate.jpa.HibernatePersistenceProvider
 
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"
+  file:
+    encoding: UTF-8
+
 server:
   port: ${SERVER_PORT}
   address: 0.0.0.0
