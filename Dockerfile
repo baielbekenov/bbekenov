@@ -6,7 +6,7 @@ COPY . .
 RUN chmod +x ./gradlew
 RUN ./gradlew build -x test --no-daemon --warning-mode all
 
-FROM eclipse-temurin:17-jre
+FROM eclipse-temurin:21-jre
 
 WORKDIR /app
 COPY --from=build /app/build/libs/*.jar app.jar
