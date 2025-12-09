@@ -84,4 +84,9 @@ public class AdService implements IAdService {
             log.error("Ошибка при запросе Lalafo API", e);
         }
     }
+
+    @Override
+    public List<Ad> getTestResult() {
+        return adRepository.findTop100ByOrderByPostedAtDesc();
+    }
 }

@@ -1,10 +1,13 @@
 package kg.baiel.bbekenov.cotroller;
+import kg.baiel.bbekenov.entity.Ad;
 import kg.baiel.bbekenov.service.IAdService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/ads")
@@ -25,5 +28,10 @@ public class TestResultController {
             e.printStackTrace();
             return ResponseEntity.status(500).body("Ошибка при сохранении в базе: " + e.getMessage());
         }
+    }
+
+    @GetMapping("/test-result")
+    public List<Ad> getTestResult() {
+        return adService.getTestResult();
     }
 }
